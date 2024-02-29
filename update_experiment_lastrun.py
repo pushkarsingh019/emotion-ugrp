@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on Sun Feb 25 12:07:30 2024
+    on Wed Feb 28 19:53:52 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -580,7 +580,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     text_8 = visual.TextStim(win=win, name='text_8',
         text='',
         font='Open Sans',
-        pos=(0, 0.05), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0.1), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-3.0);
@@ -1131,7 +1131,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=10.0, method='random', 
+    trials = data.TrialHandler(nReps=0.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -1171,28 +1171,28 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             shape_path = triangle
             thisExp.addData("shape", "triangle")
             thisExp.addData("pair", "match")
-            thisExp.addData("label", "You")
+            thisExp.addData("Label", "You")
             c_resp = 'm'
         elif 1/4 < value <= 2/4:
             label_text = "You"
             shape_path = square
             thisExp.addData("shape", "square")
             thisExp.addData("pair", "unmatch")
-            thisExp.addData("label", "You")
+            thisExp.addData("Label", "You")
             c_resp = 'z'
         elif 2/4 < value <= 3/4:
             label_text = "Stranger"
             shape_path = triangle
             thisExp.addData("shape", "triangle")
             thisExp.addData("pair", "unmatch")
-            thisExp.addData("label", "Stranger")
+            thisExp.addData("Label", "Stranger")
             c_resp = 'z'
         elif 3/4 < value <= 4/4:
             label_text = "Stranger"
             shape_path = square
             thisExp.addData("shape", "square")
             thisExp.addData("pair", "match")
-            thisExp.addData("label", "Stranger")
+            thisExp.addData("Label", "Stranger")
             c_resp = 'm'
         else:
             print("we just broke math")
@@ -1510,7 +1510,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 10.0 repeats of 'trials'
+    # completed 0.0 repeats of 'trials'
     
     
     # --- Prepare to start Routine "free_view_instruction" ---
@@ -1943,7 +1943,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_3 = data.TrialHandler(nReps=1.0, method='fullRandom', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('block1_distractors.xlsx'),
+        trialList=data.importConditions('distractor.xlsx'),
         seed=None, name='trials_3')
     thisExp.addLoop(trials_3)  # add the loop to the experiment
     thisTrial_3 = trials_3.trialList[0]  # so we can initialise stimuli with some values
@@ -2007,7 +2007,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             print("block one conditions broke math...")
         
         
-        distractor_block1.setImage(distractors_blockOne)
+        distractor_block1.setImage(distractor)
         blockone_label.setText(label_block_one)
         key_resp_4.keys = []
         key_resp_4.rt = []
@@ -2058,7 +2058,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # if block1_fixation is stopping this frame...
             if block1_fixation.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > block1_fixation.tStartRefresh + 0.5-frameTolerance:
+                if tThisFlipGlobal > block1_fixation.tStartRefresh + 5.5-frameTolerance:
                     # keep track of stop time/frame for later
                     block1_fixation.tStop = t  # not accounting for scr refresh
                     block1_fixation.frameNStop = frameN  # exact frame index
@@ -2522,7 +2522,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials_4 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('block2_distractors.xlsx'),
+        trialList=data.importConditions('distractor.xlsx'),
         seed=None, name='trials_4')
     thisExp.addLoop(trials_4)  # add the loop to the experiment
     thisTrial_4 = trials_4.trialList[0]  # so we can initialise stimuli with some values
@@ -2558,28 +2558,28 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             block2_shape_path = triangle
             label_block_two = "You"
             correct_resp_blockTwo = "m"
-            thisExp.addData("match", "true")
+            thisExp.addData("pair", "match")
             thisExp.addData("shape" , "triangle")
             thisExp.addData("Label", "You")
         elif 1/4 < random_value <= 2/4:
             block2_shape_path = triangle
             label_block_two = "Stranger"
             correct_resp_blockTwo = "z"
-            thisExp.addData("match", "false")
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("shape" , "triangle")
             thisExp.addData("Label", "Stranger")
         elif 2/4 < random_value <= 3/4:
             block2_shape_path = square
             label_block_two = "You"
             correct_resp_blockTwo = "z"
-            thisExp.addData("match", "false")
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("shape" , "square")
             thisExp.addData("Label", "You")
         elif 3/4 < random_value <= 4/4:
             block2_shape_path = square
             label_block_two = "Stranger"
             correct_resp_blockTwo = "m"
-            thisExp.addData("match", "true")
+            thisExp.addData("pair", "match")
             thisExp.addData("shape" , "square")
             thisExp.addData("Label", "Stranger")
         else:
@@ -2592,7 +2592,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         key_resp_8.keys = []
         key_resp_8.rt = []
         _key_resp_8_allKeys = []
-        block1_shape_3.setImage(block2_shape_path)
+        block1_shape_3.setImage(distractor)
         # keep track of which components have finished
         block_2_newComponents = [block1_fixation_3, distractor_block1_3, blockone_label_3, key_resp_8, block1_shape_3]
         for thisComponent in block_2_newComponents:
