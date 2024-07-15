@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on July 15, 2024, at 17:37
+    on July 15, 2024, at 17:46
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -132,7 +132,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Neuro_Lab01\\Documents\\01_Pushkar\\emotion-ugrp\\GroupA_final_lastrun.py',
+        originPath='C:\\Users\\Neuro_Lab01\\Documents\\01_Pushkar\\emotion-ugrp\\GroupB_final_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -356,7 +356,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "self_other_instruction" ---
     text_norm_2 = visual.TextStim(win=win, name='text_norm_2',
-        text="In this study, you will be shown two shapes (square and triangle) with two labels (you and stranger). You have to memorize this association. \n\n- You are represented by a Sqaure (You-Square)\n- There is a Stranger (an unknown person to you), who is represented by Triangle (Stranger-triangle)\n\nTake a few minutes to memorize this association. Let me know when you have memorized and ready to proceed to the experiment.\n\npress 'spacebar' to continue\n",
+        text="In this study, you will be shown two shapes (triangle and square) with two labels (you and stranger). You have to memorize this association. \n\n- You are represented by a Triangle (You-Triangle)\n- There is a Stranger (an unknown person to you), who is represented by square (Stranger-square)\n\nTake a few minutes to memorize this association. Let me know when you have memorized and ready to proceed to the experiment.\n\npress 'spacebar' to continue\n",
         font='Arial',
         units='norm', pos=(0, 0), height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -374,18 +374,19 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     triangle_path = "stimulus/triangle.png"
     square_path = "stimulus/square.png"
     
-    # square = you, triangle =  stranger
+    # you = triangle, stranger = square
+    
     label_self = visual.TextStim(win=win, name='label_self',
         text='You',
         font='Open Sans',
-        units='pix', pos=(right_position, bottom_position), height=letter_height, wrapWidth=None, ori=0.0, 
+        units='pix', pos=(left_position, bottom_position), height=letter_height, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
     label_other = visual.TextStim(win=win, name='label_other',
         text='Stranger',
         font='Open Sans',
-        units='pix', pos=(left_position, bottom_position), height=letter_height, wrapWidth=None, ori=0.0, 
+        units='pix', pos=(right_position, bottom_position), height=letter_height, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
@@ -416,7 +417,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "self_other_starting" ---
     text_norm_3 = visual.TextStim(win=win, name='text_norm_3',
-        text='Your task is to judge whether the shape label pairing is correct or incorrect. If the shape label pairing is correct press the key which is labeled "correct" and if its incorrect press key labeled "Incorrect" on your keyboard.\n\npress \'spacebar\' to continue\n',
+        text='Your task is to judge whether the shape label pairing is correct or incorrect. If the shape label pairing is correct press the button labeled "correct and if its incorrect press the button labelled "incorrect" on the keyboard.\n\npress \'spacebar\' to continue\n',
         font='Arial',
         units='norm', pos=(0, 0), height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -495,7 +496,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "task_start" ---
     text_norm_4 = visual.TextStim(win=win, name='text_norm_4',
-        text='The task is about to start If the shape label pairing is correct press the button labeled "correct and if its incorrect press the button labelled "incorrect" on the keyboard.\n\nShape and the label are presented for very short period of time. Ignore the emotional/nonemotional images and try to respond as fast as possible. \n\npress \'spacebar\' to continue...\n',
+        text='The task is about to start if the shape label pairing is correct press the button labeled "correct and if its incorrect press the button labelled "incorrect" on the keyboard.\n\nShape and the label are presented for very short period of time. Ignore the emotional/nonemotional images and try to respond as fast as possible. \n\npress \'spacebar\' to continue...\n',
         font='Arial',
         units='norm', pos=(0, 0), height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -606,7 +607,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='distractor_block1_3', units='pix', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[0,0], size=(400, 300),
+        ori=0.0, pos=(0, distractor_y), size=(400, 300),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-2.0)
@@ -629,7 +630,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "block2_feedback_new" ---
     # Run 'Begin Experiment' code from code_11
-    feedback_blockTwo = ""
+    feedback_blockTwo = "test"
     text_6 = visual.TextStim(win=win, name='text_6',
         text='',
         font='Open Sans',
@@ -1137,7 +1138,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=3.0, method='random', 
+    trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -1176,30 +1177,30 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             label_text = "You"
             shape_path = triangle
             thisExp.addData("shape", "triangle")
-            thisExp.addData("pair", "unmatch")
+            thisExp.addData("pair", "match")
             thisExp.addData("Label", "You")
-            c_resp = 'z'
+            c_resp = 'm'
         elif 1/4 < value <= 2/4:
             label_text = "You"
             shape_path = square
             thisExp.addData("shape", "square")
-            thisExp.addData("pair", "match")
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("Label", "You")
-            c_resp = 'm'
+            c_resp = 'z'
         elif 2/4 < value <= 3/4:
             label_text = "Stranger"
             shape_path = triangle
             thisExp.addData("shape", "triangle")
-            thisExp.addData("pair", "match")
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("Label", "Stranger")
-            c_resp = 'm'
+            c_resp = 'z'
         elif 3/4 < value <= 4/4:
             label_text = "Stranger"
             shape_path = square
             thisExp.addData("shape", "square")
-            thisExp.addData("pair", "unmatch")
+            thisExp.addData("pair", "match")
             thisExp.addData("Label", "Stranger")
-            c_resp = 'z'
+            c_resp = 'm'
         else:
             print("we just broke math")
         label.setText(label_text)
@@ -1516,7 +1517,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 3.0 repeats of 'trials'
+    # completed 1.0 repeats of 'trials'
     
     
     # --- Prepare to start Routine "free_view_instruction" ---
@@ -1947,7 +1948,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.addTime(-5.000000)
     
     # set up handler to look after randomisation of conditions etc
-    trials_3 = data.TrialHandler(nReps=0.0, method='fullRandom', 
+    trials_3 = data.TrialHandler(nReps=1.0, method='fullRandom', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('distractor.xlsx'),
         seed=None, name='trials_3')
@@ -1984,36 +1985,36 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if random_value <= 1/4:
             block1_shape_path = triangle
             label_block_one = "You"
-            correct_resp_blockOne = "z"
-            thisExp.addData("pair", "unmatch")
+            correct_resp_blockOne = "m"
+            thisExp.addData("pair", "match")
             thisExp.addData("shape" , "triangle")
             thisExp.addData("Label", "You")
         elif 1/4 < random_value <= 2/4:
             block1_shape_path = triangle
             label_block_one = "Stranger"
-            correct_resp_blockOne = "m"
-            thisExp.addData("pair", "match")
+            correct_resp_blockOne = "z"
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("shape" , "triangle")
             thisExp.addData("Label", "Stranger")
         elif 2/4 < random_value <= 3/4:
             block1_shape_path = square
             label_block_one = "You"
-            correct_resp_blockOne = "m"
-            thisExp.addData("pair", "match")
+            correct_resp_blockOne = "z"
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("shape" , "square")
             thisExp.addData("Label", "You")
         elif 3/4 < random_value <= 4/4:
             block1_shape_path = square
             label_block_one = "Stranger"
-            correct_resp_blockOne = "z"
-            thisExp.addData("pair", "unmatch")
+            correct_resp_blockOne = "m"
+            thisExp.addData("pair", "match")
             thisExp.addData("shape" , "square")
             thisExp.addData("Label", "Stranger")
         else:
             print("block one conditions broke math...")
         
         
-        distractor_block1.setPos((np.random.choice([left_position, right_position], p=[0.5,0.5]), distractor_y))
+        distractor_block1.setPos((np.random.choice([left_position,right_position], p=[0.5,0.5]), distractor_y))
         distractor_block1.setImage(distractor)
         blockone_label.setText(label_block_one)
         key_resp_4.keys = []
@@ -2416,7 +2417,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 0.0 repeats of 'trials_3'
+    # completed 1.0 repeats of 'trials_3'
     
     
     # --- Prepare to start Routine "break_2" ---
@@ -2621,36 +2622,35 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if random_value <= 1/4:
             block2_shape_path = triangle
             label_block_two = "You"
-            correct_resp_blockTwo = "z"
-            thisExp.addData("pair", "unmatch")
+            correct_resp_blockTwo = "m"
+            thisExp.addData("pair", "match")
             thisExp.addData("shape" , "triangle")
             thisExp.addData("Label", "You")
         elif 1/4 < random_value <= 2/4:
             block2_shape_path = triangle
             label_block_two = "Stranger"
-            correct_resp_blockTwo = "m"
-            thisExp.addData("pair", "match")
+            correct_resp_blockTwo = "z"
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("shape" , "triangle")
             thisExp.addData("Label", "Stranger")
         elif 2/4 < random_value <= 3/4:
             block2_shape_path = square
             label_block_two = "You"
-            correct_resp_blockTwo = "m"
-            thisExp.addData("pair", "match")
+            correct_resp_blockTwo = "z"
+            thisExp.addData("pair", "unmatch")
             thisExp.addData("shape" , "square")
             thisExp.addData("Label", "You")
         elif 3/4 < random_value <= 4/4:
             block2_shape_path = square
             label_block_two = "Stranger"
-            correct_resp_blockTwo = "z"
-            thisExp.addData("pair", "unmatch")
+            correct_resp_blockTwo = "m"
+            thisExp.addData("pair", "match")
             thisExp.addData("shape" , "square")
             thisExp.addData("Label", "Stranger")
         else:
             print("block two conditions broke math...")
         
         
-        distractor_block1_3.setPos((np.random.choice([left_position, right_position], p=[0.5,0.5]), distractor_y))
         distractor_block1_3.setImage(distractor)
         blockone_label_3.setText(label_block_two
         )
@@ -2902,6 +2902,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 feedback_blockTwo = "incorrect"
         else:
             feedback_blockTwo = "miss"
+            
+        print(key_resp_8.keys)
+        print(correct_resp_blockTwo)
+        print(feedback_blockTwo)
         
         text_6.setText(feedback_blockTwo)
         # keep track of which components have finished
