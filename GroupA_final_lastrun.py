@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on July 15, 2024, at 17:37
+    on Wed Jul 17 21:33:42 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,6 +40,7 @@ from psychopy.hardware import keyboard
 # Run 'Before Experiment' code from load_variables
 # variables for positioning throughout the expeirment
 import numpy as np
+import base64
 
 height = 150
 width = 150
@@ -132,7 +133,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Neuro_Lab01\\Documents\\01_Pushkar\\emotion-ugrp\\GroupA_final_lastrun.py',
+        originPath='/Users/pushkarsingh/Documents/01 University/emotion-ugrp/GroupA_final_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -566,30 +567,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    
-    # --- Initialize components for Routine "break_2" ---
-    text_5 = visual.TextStim(win=win, name='text_5',
-        text='Take a break for 2 minutes and come back to the expeirment.',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
-    key_resp_6 = keyboard.Keyboard()
-    text_7 = visual.TextStim(win=win, name='text_7',
-        text='Press "S" when you are ready to resume.',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-2.0);
-    text_8 = visual.TextStim(win=win, name='text_8',
-        text='',
-        font='Open Sans',
-        pos=(0, 0.1), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-3.0);
     
     # --- Initialize components for Routine "block_2_new" ---
     # Run 'Begin Experiment' code from code_10
@@ -1137,7 +1114,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=3.0, method='random', 
+    trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -1516,7 +1493,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 3.0 repeats of 'trials'
+    # completed 1.0 repeats of 'trials'
     
     
     # --- Prepare to start Routine "free_view_instruction" ---
@@ -2419,172 +2396,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # completed 0.0 repeats of 'trials_3'
     
     
-    # --- Prepare to start Routine "break_2" ---
-    continueRoutine = True
-    # update component parameters for each repeat
-    key_resp_6.keys = []
-    key_resp_6.rt = []
-    _key_resp_6_allKeys = []
-    # keep track of which components have finished
-    break_2Components = [text_5, key_resp_6, text_7, text_8]
-    for thisComponent in break_2Components:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "break_2" ---
-    routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # *text_5* updates
-        
-        # if text_5 is starting this frame...
-        if text_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            text_5.frameNStart = frameN  # exact frame index
-            text_5.tStart = t  # local t and not account for scr refresh
-            text_5.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_5, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            text_5.status = STARTED
-            text_5.setAutoDraw(True)
-        
-        # if text_5 is active this frame...
-        if text_5.status == STARTED:
-            # update params
-            pass
-        
-        # if text_5 is stopping this frame...
-        if text_5.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_5.tStartRefresh + 120.0-frameTolerance:
-                # keep track of stop time/frame for later
-                text_5.tStop = t  # not accounting for scr refresh
-                text_5.frameNStop = frameN  # exact frame index
-                # update status
-                text_5.status = FINISHED
-                text_5.setAutoDraw(False)
-        
-        # *key_resp_6* updates
-        waitOnFlip = False
-        
-        # if key_resp_6 is starting this frame...
-        if key_resp_6.status == NOT_STARTED and tThisFlip >= 120.0-frameTolerance:
-            # keep track of start time/frame for later
-            key_resp_6.frameNStart = frameN  # exact frame index
-            key_resp_6.tStart = t  # local t and not account for scr refresh
-            key_resp_6.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(key_resp_6, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'key_resp_6.started')
-            # update status
-            key_resp_6.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(key_resp_6.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(key_resp_6.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if key_resp_6.status == STARTED and not waitOnFlip:
-            theseKeys = key_resp_6.getKeys(keyList=['s'], ignoreKeys=["escape"], waitRelease=False)
-            _key_resp_6_allKeys.extend(theseKeys)
-            if len(_key_resp_6_allKeys):
-                key_resp_6.keys = _key_resp_6_allKeys[-1].name  # just the last key pressed
-                key_resp_6.rt = _key_resp_6_allKeys[-1].rt
-                key_resp_6.duration = _key_resp_6_allKeys[-1].duration
-                # a response ends the routine
-                continueRoutine = False
-        
-        # *text_7* updates
-        
-        # if text_7 is starting this frame...
-        if text_7.status == NOT_STARTED and tThisFlip >= 120.0-frameTolerance:
-            # keep track of start time/frame for later
-            text_7.frameNStart = frameN  # exact frame index
-            text_7.tStart = t  # local t and not account for scr refresh
-            text_7.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_7, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_7.started')
-            # update status
-            text_7.status = STARTED
-            text_7.setAutoDraw(True)
-        
-        # if text_7 is active this frame...
-        if text_7.status == STARTED:
-            # update params
-            pass
-        
-        # *text_8* updates
-        
-        # if text_8 is starting this frame...
-        if text_8.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            text_8.frameNStart = frameN  # exact frame index
-            text_8.tStart = t  # local t and not account for scr refresh
-            text_8.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_8, 'tStartRefresh')  # time at next scr refresh
-            # update status
-            text_8.status = STARTED
-            text_8.setAutoDraw(True)
-        
-        # if text_8 is active this frame...
-        if text_8.status == STARTED:
-            # update params
-            text_8.setText(str(120-int(t)), log=False)
-        
-        # if text_8 is stopping this frame...
-        if text_8.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_8.tStartRefresh + 120.0-frameTolerance:
-                # keep track of stop time/frame for later
-                text_8.tStop = t  # not accounting for scr refresh
-                text_8.frameNStop = frameN  # exact frame index
-                # update status
-                text_8.status = FINISHED
-                text_8.setAutoDraw(False)
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, inputs=inputs, win=win)
-            return
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in break_2Components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "break_2" ---
-    for thisComponent in break_2Components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    # the Routine "break_2" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
     # set up handler to look after randomisation of conditions etc
-    trials_4 = data.TrialHandler(nReps=1.0, method='random', 
+    trials_4 = data.TrialHandler(nReps=0.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('distractor.xlsx'),
         seed=None, name='trials_4')
@@ -2993,7 +2806,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 1.0 repeats of 'trials_4'
+    # completed 0.0 repeats of 'trials_4'
     
     
     # --- Prepare to start Routine "thank_you" ---
@@ -3082,6 +2895,34 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         routineTimer.reset()
     else:
         routineTimer.addTime(-5.000000)
+    # Run 'End Experiment' code from load_variables
+    def obfuscate_file(file_path):
+        if file_path.endswith('.obfuscated'):
+            print(f"File {file_path} is already obfuscated. Skipping.")
+            return
+    
+        with open(file_path, 'rb') as file:
+            content = file.read()
+    
+        obfuscated_content = base64.b64encode(content)
+    
+        obfuscated_file_path = file_path + '.obfuscated'
+        with open(obfuscated_file_path, 'wb') as file:
+            file.write(obfuscated_content)
+    
+        os.remove(file_path)
+        print(f"File {file_path} has been obfuscated.")
+    
+    def obfuscate_data_folder(folder_path):
+        for root, _, files in os.walk(folder_path):
+            for file in files:
+                if file.endswith('.csv'):
+                    file_path = os.path.join(root, file)
+                    obfuscate_file(file_path)
+    
+    # Usage
+    data_folder = 'data'
+    obfuscate_data_folder(data_folder)
     
     # mark experiment as finished
     endExperiment(thisExp, win=win, inputs=inputs)

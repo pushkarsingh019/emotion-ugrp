@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2024.1.4">
+<PsychoPy2experiment encoding="utf-8" version="2024.1.5">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -232,17 +232,17 @@
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <CodeComponent name="load_variables" plugin="None">
-        <Param val="# variables for positioning throughout the expeirment&amp;#10;import numpy as np&amp;#10;&amp;#10;height = 150&amp;#10;width = 150&amp;#10;left_position = -400&amp;#10;right_position = 400&amp;#10;bottom_position = -150&amp;#10;top_position = 200&amp;#10;below_position = -240&amp;#10;letter_height = 36&amp;#10;triangle_width = 150&amp;#10;triangle_height = 170&amp;#10;distractor_y = -50" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="# variables for positioning throughout the expeirment&amp;#10;import numpy as np&amp;#10;import base64&amp;#10;&amp;#10;height = 150&amp;#10;width = 150&amp;#10;left_position = -400&amp;#10;right_position = 400&amp;#10;bottom_position = -150&amp;#10;top_position = 200&amp;#10;below_position = -240&amp;#10;letter_height = 36&amp;#10;triangle_width = 150&amp;#10;triangle_height = 170&amp;#10;distractor_y = -50" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="import * as np from 'numpy';&amp;#10;height = 150;&amp;#10;width = 150;&amp;#10;left_position = (- 400);&amp;#10;right_position = 400;&amp;#10;bottom_position = (- 150);&amp;#10;top_position = 200;&amp;#10;below_position = (- 240);&amp;#10;letter_height = 36;&amp;#10;triangle_width = 150;&amp;#10;triangle_height = 170;&amp;#10;distractor_y = (- 50);&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="def obfuscate_file(file_path):&amp;#10;    if file_path.endswith('.obfuscated'):&amp;#10;        print(f&quot;File {file_path} is already obfuscated. Skipping.&quot;)&amp;#10;        return&amp;#10;&amp;#10;    with open(file_path, 'rb') as file:&amp;#10;        content = file.read()&amp;#10;&amp;#10;    obfuscated_content = base64.b64encode(content)&amp;#10;&amp;#10;    obfuscated_file_path = file_path + '.obfuscated'&amp;#10;    with open(obfuscated_file_path, 'wb') as file:&amp;#10;        file.write(obfuscated_content)&amp;#10;&amp;#10;    os.remove(file_path)&amp;#10;    print(f&quot;File {file_path} has been obfuscated.&quot;)&amp;#10;&amp;#10;def obfuscate_data_folder(folder_path):&amp;#10;    for root, _, files in os.walk(folder_path):&amp;#10;        for file in files:&amp;#10;            if file.endswith('.csv'):&amp;#10;                file_path = os.path.join(root, file)&amp;#10;                obfuscate_file(file_path)&amp;#10;&amp;#10;# Usage&amp;#10;data_folder = 'data'&amp;#10;obfuscate_data_folder(data_folder)" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -2213,7 +2213,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="nReps" updates="None" val="160" valType="num"/>
       <Param name="name" updates="None" val="trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

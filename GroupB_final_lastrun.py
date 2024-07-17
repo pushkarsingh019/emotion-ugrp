@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on July 15, 2024, at 17:46
+    on Wed Jul 17 12:36:31 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -132,7 +132,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Neuro_Lab01\\Documents\\01_Pushkar\\emotion-ugrp\\GroupB_final_lastrun.py',
+        originPath='/Users/pushkarsingh/Documents/01 University/emotion-ugrp/GroupB_final_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -607,7 +607,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='distractor_block1_3', units='pix', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=(0, distractor_y), size=(400, 300),
+        ori=0.0, pos=[0,0], size=(400, 300),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-2.0)
@@ -2651,6 +2651,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             print("block two conditions broke math...")
         
         
+        distractor_block1_3.setPos((np.random.choice([left_position,right_position], p=[0.5,0.5]), distractor_y))
         distractor_block1_3.setImage(distractor)
         blockone_label_3.setText(label_block_two
         )
